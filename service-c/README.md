@@ -10,9 +10,9 @@ Para fins de armazenamento e consulta, o banco de dados utilizado por este servi
 
 # Instalação
 
-É necessário que o ambiente escolhido para instalação possua o **Docker** e todas suas dependências previamente instaladas, uma vez instalado, basta seguir os passos abaixo.
+É necessário que o ambiente escolhido para instalação possua o **Docker** e todas suas dependências previamente instaladas, uma vez instalado, basta seguir os seguintes passos:
 
-Para instalar a aplicação, basta rodar o comando:
+Para instalar a aplicação, basta rodar o comando abaixo.
 
 ```
 $ make install
@@ -20,9 +20,9 @@ $ make install
 
 O comando **make install** é responsável pela execução de todas as pendências do serviço, ao final, testes automatizados serão executados.
 
-Caso seja necessário executar comandos individualmente, basta utilizar o comando ```make <option>```
+Caso seja necessário executar comandos individualmente, basta utilizar o comando ```make <option>```.
 
-Para exibir a lista de comandos disponníveis, basta executar o comando ```make```
+Para exibir a lista de comandos disponníveis, basta executar o comando ```make```.
 
 # Inicialização
 
@@ -36,9 +36,9 @@ Ao final da inicialização, o serviço estará disponível no seguinte endereç
 
 # Rotas
 
-- GET v1/users/<cpf:string>/last_query
+- GET v1/users/:cpf/last_query
 
-Rota disponível para exibição da última consulta às dívidas financeiras do portador do CPF solicitado.
+Rota disponível para exibição da última consulta das dívidas financeiras do portador do CPF solicitado.
 
 Header Necessário:
 

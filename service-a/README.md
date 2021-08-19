@@ -10,9 +10,9 @@ Para fins de armazenamento e consulta, o banco de dados utilizado por este servi
 
 # Instalação
 
-É necessário que o ambiente escolhido para instalação possua o **Docker** e todas suas dependências previamente instaladas, uma vez instalado, basta seguir os passos abaixo.
+É necessário que o ambiente escolhido para instalação possua o **Docker** e todas suas dependências previamente instaladas, uma vez instalado, basta seguir os seguintes passos:
 
-Para instalar a aplicação, basta rodar o comando:
+Para instalar a aplicação, basta rodar o comando abaixo.
 
 ```
 $ make install
@@ -20,9 +20,9 @@ $ make install
 
 O comando **make install** é responsável pela execução de todas as pendências do serviço, ao final, testes automatizados serão executados.
 
-Caso seja necessário executar comandos individualmente, basta utilizar o comando ```make <option>```
+Caso seja necessário executar comandos individualmente, basta utilizar o comando ```make <option>```.
 
-Para exibir a lista de comandos disponníveis, basta executar o comando ```make```
+Para exibir a lista de comandos disponníveis, basta executar o comando ```make```.
 
 # Inicialização
 
@@ -51,7 +51,7 @@ Dados de entrada:
 
 Uma vez em que o login é bem sucedido, o serviço retornará um **Bearer Token** para ser utilizado nas demais rotas.
 
-- DELETE v2/users/logout
+- DELETE v1/users/logout
 
 Rota disponível para desautenticação de usuários que geraram um **Bearer Token** na rota de autenticação. O token passado é armazenado em banco de dados para fins de validação, uma vez desautenticado, o token é considerado inválido para novas autenticações.
 

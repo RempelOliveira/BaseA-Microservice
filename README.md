@@ -1,6 +1,6 @@
 # Microservices Repo
 
-Solução divida em três microserviços com a finalizadade de armazenar e disponibilzar dados relacionados a um ou mais CPFs.
+Solução dividida em três microserviços com a finalidade de armazenar e disponibilzar dados relacionados a um ou mais CPFs.
 
 Cada serviço é responsável por armazenar e disponibilizar dados e recursos específicos.
 
