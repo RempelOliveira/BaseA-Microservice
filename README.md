@@ -10,7 +10,7 @@ Serviço responsável por armazenar e disponibilizar dados pessoais e dívidas r
 
 # Base B
 
-Serviço responsável por armazenar dados pessoais adicionais relacionados a um ou mais CPFs. Sua funcionalidade principal é calcular e disponibilizar a pontuação relacionada a um determinado CPF com base em seu padrão financeiro. Esta pontuação é usada para referência em linhas de crédito, abertura de contas em bancos e outros fins.
+Serviço responsável por armazenar dados pessoais adicionais e bens pessoais relacionados a um ou mais CPFs. Sua funcionalidade principal é calcular e disponibilizar a pontuação relacionada a um determinado CPF com base em seu padrão financeiro. Esta pontuação é usada para referência em linhas de crédito, abertura de contas em bancos e outros fins.
 
 # Base C
 

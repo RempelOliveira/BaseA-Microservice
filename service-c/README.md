@@ -58,7 +58,14 @@ Api-Key: <:string>
 
 - GET v1/users/<cpf:string>/financial_transactions
 
-Rota disponível para exibição de todas as movimentações financeiras realizadas pelo portador do CPF solicitado.
+Rota paginada disponível para exibição de todas as movimentações financeiras realizadas pelo portador do CPF solicitado.
+
+Parâmetros Disponíveis:
+
+```
+page: <:int>
+per_page: <:int>
+```
 
 Header Necessário:
 

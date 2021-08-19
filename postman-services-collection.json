@@ -1,0 +1,1679 @@
+{
+	"info": {
+		"_postman_id": "24ac6ee8-ad9c-4c91-9999-3925293f9e2b",
+		"name": "Microservices",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Base A",
+			"item": [
+				{
+					"name": "Users",
+					"item": [
+						{
+							"name": "v1",
+							"item": [
+								{
+									"name": "/v1/users/login",
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"cpf\": \"41090753004\",\r\n    \"password\": \"123456\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{ms-base-a-api}}/v1/users/login",
+											"host": [
+												"{{ms-base-a-api}}"
+											],
+											"path": [
+												"v1",
+												"users",
+												"login"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "/v1/users/login 01",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"cpf\": \"41090753004\",\r\n    \"password\": \"123456\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{ms-base-a-api}}/v1/users/login",
+													"host": [
+														"{{ms-base-a-api}}"
+													],
+													"path": [
+														"v1",
+														"users",
+														"login"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Content-Length",
+													"value": "110"
+												},
+												{
+													"key": "Authorization",
+													"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjUwMDAvIiwic3ViIjoiYmI4NjRhYjAtMGRiZS00MThkLThmMWUtYzEzYzljMTQ2NGNkIiwiaWF0IjoxNjI5Mzk0NTkwLjc4NDQ4MSwiZXhwIjoxNjI5NTY3MzkwLjc4NDQ4MX0.-SvBnyjdzaNBTfFmFhGR4-CGFyG_7IWhq453uDqQKfo"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												},
+												{
+													"key": "Server",
+													"value": "Werkzeug/2.0.1 Python/3.9.6"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 19 Aug 2021 17:36:30 GMT"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"id\": \"bb864ab0-0dbe-418d-8f1e-c13c9c1464cd\",\n    \"name\": \"Beatriz Correia\",\n    \"cpf\": \"41090753004\"\n}"
+										},
+										{
+											"name": "/v1/users/login 02",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"cpf\": \"\",\r\n    \"password\": \"\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{ms-base-a-api}}/v1/users/login",
+													"host": [
+														"{{ms-base-a-api}}"
+													],
+													"path": [
+														"v1",
+														"users",
+														"login"
+													]
+												}
+											},
+											"status": "UNPROCESSABLE ENTITY",
+											"code": 422,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Content-Length",
+													"value": "123"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												},
+												{
+													"key": "Server",
+													"value": "Werkzeug/2.0.1 Python/3.9.6"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 19 Aug 2021 17:37:03 GMT"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"cpf\": [\n        \"field 'cpf' cannot be coerced: invalid\"\n    ],\n    \"password\": [\n        \"min length is 6\"\n    ]\n}"
+										},
+										{
+											"name": "/v1/users/login 03",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"cpf\": \"12345678\",\r\n    \"password\": \"123456\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{ms-base-a-api}}/v1/users/login",
+													"host": [
+														"{{ms-base-a-api}}"
+													],
+													"path": [
+														"v1",
+														"users",
+														"login"
+													]
+												}
+											},
+											"status": "UNPROCESSABLE ENTITY",
+											"code": 422,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Content-Length",
+													"value": "72"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												},
+												{
+													"key": "Server",
+													"value": "Werkzeug/2.0.1 Python/3.9.6"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 19 Aug 2021 17:37:16 GMT"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"cpf\": [\n        \"field 'cpf' cannot be coerced: invalid\"\n    ]\n}"
+										},
+										{
+											"name": "/v1/users/login 04",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"cpf\": \"40828740038\",\r\n    \"password\": \"123456\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{ms-base-a-api}}/v1/users/login",
+													"host": [
+														"{{ms-base-a-api}}"
+													],
+													"path": [
+														"v1",
+														"users",
+														"login"
+													]
+												}
+											},
+											"status": "UNAUTHORIZED",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												},
+												{
+													"key": "Content-Length",
+													"value": "0"
+												},
+												{
+													"key": "Server",
+													"value": "Werkzeug/2.0.1 Python/3.9.6"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 19 Aug 2021 17:38:12 GMT"
+												}
+											],
+											"cookie": [],
+											"body": null
+										}
+									]
+								},
+								{
+									"name": "/v1/users/logout",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{ms-base-a-token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{ms-base-a-api}}/v1/users/logout",
+											"host": [
+												"{{ms-base-a-api}}"
+											],
+											"path": [
+												"v1",
+												"users",
+												"logout"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "/v1/users/logout 01",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{ms-base-a-api}}/v1/users/logout",
+													"host": [
+														"{{ms-base-a-api}}"
+													],
+													"path": [
+														"v1",
+														"users",
+														"logout"
+													]
+												}
+											},
+											"status": "NO CONTENT",
+											"code": 204,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												},
+												{
+													"key": "Server",
+													"value": "Werkzeug/2.0.1 Python/3.9.6"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 19 Aug 2021 17:39:08 GMT"
+												}
+											],
+											"cookie": [],
+											"body": null
+										},
+										{
+											"name": "/v1/users/logout 02",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{ms-base-a-api}}/v1/users/logout",
+													"host": [
+														"{{ms-base-a-api}}"
+													],
+													"path": [
+														"v1",
+														"users",
+														"logout"
+													]
+												}
+											},
+											"status": "UNAUTHORIZED",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												},
+												{
+													"key": "Content-Length",
+													"value": "0"
+												},
+												{
+													"key": "Server",
+													"value": "Werkzeug/2.0.1 Python/3.9.6"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 19 Aug 2021 17:39:22 GMT"
+												}
+											],
+											"cookie": [],
+											"body": null
+										}
+									]
+								},
+								{
+									"name": "/v1/users/account",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{ms-base-a-token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{ms-base-a-api}}/v1/users/account",
+											"host": [
+												"{{ms-base-a-api}}"
+											],
+											"path": [
+												"v1",
+												"users",
+												"account"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "/v1/users/account 01",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{ms-base-a-api}}/v1/users/account",
+													"host": [
+														"{{ms-base-a-api}}"
+													],
+													"path": [
+														"v1",
+														"users",
+														"account"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Content-Length",
+													"value": "351"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												},
+												{
+													"key": "Server",
+													"value": "Werkzeug/2.0.1 Python/3.9.6"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 19 Aug 2021 17:38:55 GMT"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"id\": \"bb864ab0-0dbe-418d-8f1e-c13c9c1464cd\",\n    \"name\": \"Beatriz Correia\",\n    \"cpf\": \"41090753004\",\n    \"address\": {\n        \"street\": \"Vereda de Duarte\",\n        \"number\": \"666\",\n        \"supplement\": null,\n        \"postcode\": \"41712280\",\n        \"country\": \"Brazil\",\n        \"state\": \"Amapá\",\n        \"city\": \"da Paz do Norte\"\n    }\n}"
+										},
+										{
+											"name": "/v1/users/account 02",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{ms-base-a-api}}/v1/users/account",
+													"host": [
+														"{{ms-base-a-api}}"
+													],
+													"path": [
+														"v1",
+														"users",
+														"account"
+													]
+												}
+											},
+											"status": "UNAUTHORIZED",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												},
+												{
+													"key": "Content-Length",
+													"value": "0"
+												},
+												{
+													"key": "Server",
+													"value": "Werkzeug/2.0.1 Python/3.9.6"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 19 Aug 2021 17:39:16 GMT"
+												}
+											],
+											"cookie": [],
+											"body": null
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Debts",
+					"item": [
+						{
+							"name": "v1",
+							"item": [
+								{
+									"name": "/v1/users/debts",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{ms-base-a-token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{ms-base-a-api}}/v1/users/debts",
+											"host": [
+												"{{ms-base-a-api}}"
+											],
+											"path": [
+												"v1",
+												"users",
+												"debts"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "per_page",
+													"value": "10",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "/v1/users/debts 01",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{ms-base-a-api}}/v1/users/debts",
+													"host": [
+														"{{ms-base-a-api}}"
+													],
+													"path": [
+														"v1",
+														"users",
+														"debts"
+													],
+													"query": [
+														{
+															"key": "page",
+															"value": "1",
+															"disabled": true
+														},
+														{
+															"key": "per_page",
+															"value": "10",
+															"disabled": true
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Content-Length",
+													"value": "1554"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												},
+												{
+													"key": "Server",
+													"value": "Werkzeug/2.0.1 Python/3.9.6"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 19 Aug 2021 17:39:51 GMT"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"data\": [\n        {\n            \"id\": \"f4398625-baed-45e7-b8f3-bdca3c7e8d27\",\n            \"type\": \"credit-card\",\n            \"value\": 400.91\n        },\n        {\n            \"id\": \"17e88fd5-6a0a-42e3-88a6-be89c1e6b9e6\",\n            \"type\": \"personal-credit\",\n            \"value\": 771.36\n        },\n        {\n            \"id\": \"a5787879-9aef-4dd6-a9e1-55f137f69829\",\n            \"type\": \"real-estate-financing\",\n            \"value\": 3.36\n        },\n        {\n            \"id\": \"ca343593-730b-4ec5-85f9-02c481bc74cb\",\n            \"type\": \"personal-credit\",\n            \"value\": 655.3\n        },\n        {\n            \"id\": \"c7fe5303-4be9-49a1-8504-c890fb128455\",\n            \"type\": \"car-financing\",\n            \"value\": 241.7\n        },\n        {\n            \"id\": \"3a5a702a-e727-48bd-8888-2f233e385bbb\",\n            \"type\": \"car-financing\",\n            \"value\": 901.59\n        },\n        {\n            \"id\": \"d2c5c933-be89-465e-b098-3000feb4f517\",\n            \"type\": \"payroll-loans\",\n            \"value\": 380.34\n        },\n        {\n            \"id\": \"683245c7-825f-4194-844b-7d8aaa318b1a\",\n            \"type\": \"car-financing\",\n            \"value\": 546.19\n        },\n        {\n            \"id\": \"acefc6c2-1142-4a33-a50f-18ce13b69aff\",\n            \"type\": \"credit-card\",\n            \"value\": 60.17\n        },\n        {\n            \"id\": \"8dd395cc-044f-4355-b701-3c30fe6aae2b\",\n            \"type\": \"credit-card\",\n            \"value\": 837.28\n        }\n    ],\n    \"pagination\": {\n        \"page\": 1,\n        \"per_page\": 10,\n        \"total\": 10\n    }\n}"
+										},
+										{
+											"name": "/v1/users/debts 02",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{ms-base-a-api}}/v1/users/debts?page=1&per_page=2",
+													"host": [
+														"{{ms-base-a-api}}"
+													],
+													"path": [
+														"v1",
+														"users",
+														"debts"
+													],
+													"query": [
+														{
+															"key": "page",
+															"value": "1"
+														},
+														{
+															"key": "per_page",
+															"value": "2"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Content-Length",
+													"value": "400"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												},
+												{
+													"key": "Server",
+													"value": "Werkzeug/2.0.1 Python/3.9.6"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 19 Aug 2021 17:40:02 GMT"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"data\": [\n        {\n            \"id\": \"f4398625-baed-45e7-b8f3-bdca3c7e8d27\",\n            \"type\": \"credit-card\",\n            \"value\": 400.91\n        },\n        {\n            \"id\": \"17e88fd5-6a0a-42e3-88a6-be89c1e6b9e6\",\n            \"type\": \"personal-credit\",\n            \"value\": 771.36\n        }\n    ],\n    \"pagination\": {\n        \"page\": 1,\n        \"per_page\": 2,\n        \"total\": 10\n    }\n}"
+										},
+										{
+											"name": "/v1/users/debts 03",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{ms-base-a-api}}/v1/users/debts",
+													"host": [
+														"{{ms-base-a-api}}"
+													],
+													"path": [
+														"v1",
+														"users",
+														"debts"
+													],
+													"query": [
+														{
+															"key": "page",
+															"value": "1",
+															"disabled": true
+														},
+														{
+															"key": "per_page",
+															"value": "10",
+															"disabled": true
+														}
+													]
+												}
+											},
+											"status": "UNAUTHORIZED",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												},
+												{
+													"key": "Content-Length",
+													"value": "0"
+												},
+												{
+													"key": "Server",
+													"value": "Werkzeug/2.0.1 Python/3.9.6"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 19 Aug 2021 17:40:20 GMT"
+												}
+											],
+											"cookie": [],
+											"body": null
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Base B",
+			"item": [
+				{
+					"name": "Scores",
+					"item": [
+						{
+							"name": "v1",
+							"item": [
+								{
+									"name": "/v1/users/:cpf/score",
+									"request": {
+										"auth": {
+											"type": "apikey",
+											"apikey": [
+												{
+													"key": "value",
+													"value": "{{ms-base-b-api-key}}",
+													"type": "string"
+												},
+												{
+													"key": "key",
+													"value": "Api-Key",
+													"type": "string"
+												},
+												{
+													"key": "in",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{ms-base-b-api}}/v1/users/:cpf/score",
+											"host": [
+												"{{ms-base-b-api}}"
+											],
+											"path": [
+												"v1",
+												"users",
+												":cpf",
+												"score"
+											],
+											"variable": [
+												{
+													"key": "cpf",
+													"value": "41090753004"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "/v1/users/:cpf/score 01",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{ms-base-b-api}}/v1/users/:cpf/score",
+													"host": [
+														"{{ms-base-b-api}}"
+													],
+													"path": [
+														"v1",
+														"users",
+														":cpf",
+														"score"
+													],
+													"variable": [
+														{
+															"key": "cpf",
+															"value": "41090753004"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Content-Length",
+													"value": "180"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												},
+												{
+													"key": "Server",
+													"value": "Werkzeug/2.0.1 Python/3.9.6"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 19 Aug 2021 17:41:19 GMT"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"id\": \"611e94081dd515df44ccfcc8\",\n    \"age\": 64,\n    \"score\": 75,\n    \"assets\": [\n        {\n            \"type\": \"car\",\n            \"payment_status\": \"paid\"\n        }\n    ]\n}"
+										},
+										{
+											"name": "/v1/users/:cpf/score 02",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{ms-base-b-api}}/v1/users/:cpf/score",
+													"host": [
+														"{{ms-base-b-api}}"
+													],
+													"path": [
+														"v1",
+														"users",
+														":cpf",
+														"score"
+													],
+													"variable": [
+														{
+															"key": "cpf",
+															"value": "41090753005"
+														}
+													]
+												}
+											},
+											"status": "NOT FOUND",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												},
+												{
+													"key": "Content-Length",
+													"value": "0"
+												},
+												{
+													"key": "Server",
+													"value": "Werkzeug/2.0.1 Python/3.9.6"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 19 Aug 2021 17:46:46 GMT"
+												}
+											],
+											"cookie": [],
+											"body": null
+										},
+										{
+											"name": "/v1/users/:cpf/score 03",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{ms-base-b-api}}/v1/users/:cpf/score",
+													"host": [
+														"{{ms-base-b-api}}"
+													],
+													"path": [
+														"v1",
+														"users",
+														":cpf",
+														"score"
+													],
+													"variable": [
+														{
+															"key": "cpf",
+															"value": "41090753004"
+														}
+													]
+												}
+											},
+											"status": "UNAUTHORIZED",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												},
+												{
+													"key": "Content-Length",
+													"value": "0"
+												},
+												{
+													"key": "Server",
+													"value": "Werkzeug/2.0.1 Python/3.9.6"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 19 Aug 2021 17:41:53 GMT"
+												}
+											],
+											"cookie": [],
+											"body": null
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Base C",
+			"item": [
+				{
+					"name": "Traces",
+					"item": [
+						{
+							"name": "v1",
+							"item": [
+								{
+									"name": "/v1/users/:cpf/last_query",
+									"request": {
+										"auth": {
+											"type": "apikey",
+											"apikey": [
+												{
+													"key": "value",
+													"value": "{{ms-base-c-api-key}}",
+													"type": "string"
+												},
+												{
+													"key": "key",
+													"value": "Api-Key",
+													"type": "string"
+												},
+												{
+													"key": "in",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{ms-base-c-api}}/v1/users/:cpf/last_query",
+											"host": [
+												"{{ms-base-c-api}}"
+											],
+											"path": [
+												"v1",
+												"users",
+												":cpf",
+												"last_query"
+											],
+											"variable": [
+												{
+													"key": "cpf",
+													"value": "41090753004"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "/v1/users/:cpf/last_query 01",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{ms-base-c-api}}/v1/users/:cpf/last_query",
+													"host": [
+														"{{ms-base-c-api}}"
+													],
+													"path": [
+														"v1",
+														"users",
+														":cpf",
+														"last_query"
+													],
+													"variable": [
+														{
+															"key": "cpf",
+															"value": "41090753004"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Content-Length",
+													"value": "75"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												},
+												{
+													"key": "Server",
+													"value": "Werkzeug/2.0.1 Python/3.9.6"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 19 Aug 2021 17:43:56 GMT"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"origin\": \"da Cunha\",\n    \"datetime\": \"2021-08-19 17:40:02.870641\"\n}"
+										},
+										{
+											"name": "/v1/users/:cpf/last_query 02",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{ms-base-c-api}}/v1/users/:cpf/last_query",
+													"host": [
+														"{{ms-base-c-api}}"
+													],
+													"path": [
+														"v1",
+														"users",
+														":cpf",
+														"last_query"
+													],
+													"variable": [
+														{
+															"key": "cpf",
+															"value": "41090753005"
+														}
+													]
+												}
+											},
+											"status": "NOT FOUND",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												},
+												{
+													"key": "Content-Length",
+													"value": "0"
+												},
+												{
+													"key": "Server",
+													"value": "Werkzeug/2.0.1 Python/3.9.6"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 19 Aug 2021 17:45:49 GMT"
+												}
+											],
+											"cookie": [],
+											"body": null
+										},
+										{
+											"name": "/v1/users/:cpf/last_query 03",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{ms-base-c-api}}/v1/users/:cpf/last_query",
+													"host": [
+														"{{ms-base-c-api}}"
+													],
+													"path": [
+														"v1",
+														"users",
+														":cpf",
+														"last_query"
+													],
+													"variable": [
+														{
+															"key": "cpf",
+															"value": "41090753004"
+														}
+													]
+												}
+											},
+											"status": "UNAUTHORIZED",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												},
+												{
+													"key": "Content-Length",
+													"value": "0"
+												},
+												{
+													"key": "Server",
+													"value": "Werkzeug/2.0.1 Python/3.9.6"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 19 Aug 2021 17:47:23 GMT"
+												}
+											],
+											"cookie": [],
+											"body": null
+										}
+									]
+								},
+								{
+									"name": "/v1/users/:cpf/last_credit_card_purchase",
+									"request": {
+										"auth": {
+											"type": "apikey",
+											"apikey": [
+												{
+													"key": "value",
+													"value": "{{ms-base-c-api-key}}",
+													"type": "string"
+												},
+												{
+													"key": "key",
+													"value": "Api-Key",
+													"type": "string"
+												},
+												{
+													"key": "in",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{ms-base-c-api}}/v1/users/:cpf/last_credit_card_purchase",
+											"host": [
+												"{{ms-base-c-api}}"
+											],
+											"path": [
+												"v1",
+												"users",
+												":cpf",
+												"last_credit_card_purchase"
+											],
+											"variable": [
+												{
+													"key": "cpf",
+													"value": "41090753004"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "/v1/users/:cpf/last_credit_card_purchase 01",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{ms-base-c-api}}/v1/users/:cpf/last_credit_card_purchase",
+													"host": [
+														"{{ms-base-c-api}}"
+													],
+													"path": [
+														"v1",
+														"users",
+														":cpf",
+														"last_credit_card_purchase"
+													],
+													"variable": [
+														{
+															"key": "cpf",
+															"value": "41090753004"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Content-Length",
+													"value": "89"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												},
+												{
+													"key": "Server",
+													"value": "Werkzeug/2.0.1 Python/3.9.6"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 19 Aug 2021 17:44:06 GMT"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"value\": 715.34,\n    \"origin\": \"da Cunha\",\n    \"datetime\": \"2021-08-18 21:10:37\"\n}"
+										},
+										{
+											"name": "/v1/users/:cpf/last_credit_card_purchase 02",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{ms-base-c-api}}/v1/users/:cpf/last_credit_card_purchase",
+													"host": [
+														"{{ms-base-c-api}}"
+													],
+													"path": [
+														"v1",
+														"users",
+														":cpf",
+														"last_credit_card_purchase"
+													],
+													"variable": [
+														{
+															"key": "cpf",
+															"value": "41090753005"
+														}
+													]
+												}
+											},
+											"status": "NOT FOUND",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												},
+												{
+													"key": "Content-Length",
+													"value": "0"
+												},
+												{
+													"key": "Server",
+													"value": "Werkzeug/2.0.1 Python/3.9.6"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 19 Aug 2021 17:46:13 GMT"
+												}
+											],
+											"cookie": [],
+											"body": null
+										},
+										{
+											"name": "/v1/users/:cpf/last_credit_card_purchase 03",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{ms-base-c-api}}/v1/users/:cpf/last_credit_card_purchase",
+													"host": [
+														"{{ms-base-c-api}}"
+													],
+													"path": [
+														"v1",
+														"users",
+														":cpf",
+														"last_credit_card_purchase"
+													],
+													"variable": [
+														{
+															"key": "cpf",
+															"value": "41090753004"
+														}
+													]
+												}
+											},
+											"status": "UNAUTHORIZED",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												},
+												{
+													"key": "Content-Length",
+													"value": "0"
+												},
+												{
+													"key": "Server",
+													"value": "Werkzeug/2.0.1 Python/3.9.6"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 19 Aug 2021 17:47:32 GMT"
+												}
+											],
+											"cookie": [],
+											"body": null
+										}
+									]
+								},
+								{
+									"name": "/v1/users/:cpf/financial_transactions",
+									"request": {
+										"auth": {
+											"type": "apikey",
+											"apikey": [
+												{
+													"key": "value",
+													"value": "{{ms-base-c-api-key}}",
+													"type": "string"
+												},
+												{
+													"key": "key",
+													"value": "Api-Key",
+													"type": "string"
+												},
+												{
+													"key": "in",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{ms-base-c-api}}/v1/users/:cpf/financial_transactions?page=1&per_page=2",
+											"host": [
+												"{{ms-base-c-api}}"
+											],
+											"path": [
+												"v1",
+												"users",
+												":cpf",
+												"financial_transactions"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "per_page",
+													"value": "2"
+												}
+											],
+											"variable": [
+												{
+													"key": "cpf",
+													"value": "41090753004"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "/v1/users/:cpf/financial_transactions 01",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{ms-base-c-api}}/v1/users/:cpf/financial_transactions",
+													"host": [
+														"{{ms-base-c-api}}"
+													],
+													"path": [
+														"v1",
+														"users",
+														":cpf",
+														"financial_transactions"
+													],
+													"query": [
+														{
+															"key": "page",
+															"value": "1",
+															"disabled": true
+														},
+														{
+															"key": "per_page",
+															"value": "10",
+															"disabled": true
+														}
+													],
+													"variable": [
+														{
+															"key": "cpf",
+															"value": "41090753004"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Content-Length",
+													"value": "1396"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												},
+												{
+													"key": "Server",
+													"value": "Werkzeug/2.0.1 Python/3.9.6"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 19 Aug 2021 17:45:31 GMT"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"data\": [\n        {\n            \"value\": 673.86,\n            \"method\": \"money\",\n            \"datetime\": \"2021-07-20 22:39:47\"\n        },\n        {\n            \"value\": 154.92,\n            \"method\": \"money\",\n            \"datetime\": \"2021-07-21 05:23:53\"\n        },\n        {\n            \"value\": 889.48,\n            \"method\": \"pix\",\n            \"datetime\": \"2021-07-21 20:07:11\"\n        },\n        {\n            \"value\": 163,\n            \"method\": \"credit-card\",\n            \"datetime\": \"2021-07-23 11:09:24\"\n        },\n        {\n            \"value\": 377.17,\n            \"method\": \"pix\",\n            \"datetime\": \"2021-07-24 13:35:44\"\n        },\n        {\n            \"value\": 22.8,\n            \"method\": \"credit-card\",\n            \"datetime\": \"2021-07-24 14:13:01\"\n        },\n        {\n            \"value\": 440.28,\n            \"method\": \"credit-card\",\n            \"datetime\": \"2021-07-25 10:19:51\"\n        },\n        {\n            \"value\": 74.7,\n            \"method\": \"pix\",\n            \"datetime\": \"2021-07-31 05:57:16\"\n        },\n        {\n            \"value\": 869.42,\n            \"method\": \"credit-card\",\n            \"datetime\": \"2021-08-06 12:28:05\"\n        },\n        {\n            \"value\": 246.12,\n            \"method\": \"money\",\n            \"datetime\": \"2021-08-07 12:47:10\"\n        }\n    ],\n    \"pagination\": {\n        \"page\": 1,\n        \"per_page\": 10,\n        \"total\": 20\n    }\n}"
+										},
+										{
+											"name": "/v1/users/:cpf/financial_transactions 02",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{ms-base-c-api}}/v1/users/:cpf/financial_transactions?page=1&per_page=2",
+													"host": [
+														"{{ms-base-c-api}}"
+													],
+													"path": [
+														"v1",
+														"users",
+														":cpf",
+														"financial_transactions"
+													],
+													"query": [
+														{
+															"key": "page",
+															"value": "1"
+														},
+														{
+															"key": "per_page",
+															"value": "2"
+														}
+													],
+													"variable": [
+														{
+															"key": "cpf",
+															"value": "41090753004"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Content-Length",
+													"value": "366"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												},
+												{
+													"key": "Server",
+													"value": "Werkzeug/2.0.1 Python/3.9.6"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 19 Aug 2021 17:45:40 GMT"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"data\": [\n        {\n            \"value\": 673.86,\n            \"method\": \"money\",\n            \"datetime\": \"2021-07-20 22:39:47\"\n        },\n        {\n            \"value\": 154.92,\n            \"method\": \"money\",\n            \"datetime\": \"2021-07-21 05:23:53\"\n        }\n    ],\n    \"pagination\": {\n        \"page\": 1,\n        \"per_page\": 2,\n        \"total\": 20\n    }\n}"
+										},
+										{
+											"name": "/v1/users/:cpf/financial_transactions 03",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{ms-base-c-api}}/v1/users/:cpf/financial_transactions?page=1&per_page=2",
+													"host": [
+														"{{ms-base-c-api}}"
+													],
+													"path": [
+														"v1",
+														"users",
+														":cpf",
+														"financial_transactions"
+													],
+													"query": [
+														{
+															"key": "page",
+															"value": "1"
+														},
+														{
+															"key": "per_page",
+															"value": "2"
+														}
+													],
+													"variable": [
+														{
+															"key": "cpf",
+															"value": "41090753005"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Content-Length",
+													"value": "107"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												},
+												{
+													"key": "Server",
+													"value": "Werkzeug/2.0.1 Python/3.9.6"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 19 Aug 2021 17:46:25 GMT"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"data\": [],\n    \"pagination\": {\n        \"page\": 1,\n        \"per_page\": 2,\n        \"total\": 0\n    }\n}"
+										},
+										{
+											"name": "/v1/users/:cpf/financial_transactions 03",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{ms-base-c-api}}/v1/users/:cpf/financial_transactions?page=1&per_page=2",
+													"host": [
+														"{{ms-base-c-api}}"
+													],
+													"path": [
+														"v1",
+														"users",
+														":cpf",
+														"financial_transactions"
+													],
+													"query": [
+														{
+															"key": "page",
+															"value": "1"
+														},
+														{
+															"key": "per_page",
+															"value": "2"
+														}
+													],
+													"variable": [
+														{
+															"key": "cpf",
+															"value": "41090753004"
+														}
+													]
+												}
+											},
+											"status": "UNAUTHORIZED",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												},
+												{
+													"key": "Content-Length",
+													"value": "0"
+												},
+												{
+													"key": "Server",
+													"value": "Werkzeug/2.0.1 Python/3.9.6"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 19 Aug 2021 17:47:39 GMT"
+												}
+											],
+											"cookie": [],
+											"body": null
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}
