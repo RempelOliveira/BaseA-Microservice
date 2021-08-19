@@ -1,0 +1,5 @@
+pytest==6.2.4
+pytest-cov==2.12.1
+mongomock==3.23.0
+fakeredis==1.6.0
+flake8==3.9.2
