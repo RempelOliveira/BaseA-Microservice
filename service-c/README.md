@@ -32,7 +32,7 @@ Para inicializar o serviço, basta executar o comando abaixo.
 $ make run
 ```
 
-Ao final da inicialização, o serviço estará disponível no seguinte endereço e porta ```http://localhost:5001```
+Ao final da inicialização, o serviço estará disponível no seguinte endereço e porta ```http://localhost:5002```
 
 # Rotas
 
