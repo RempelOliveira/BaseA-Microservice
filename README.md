@@ -20,7 +20,7 @@ Serviço responsável por armazenar e disponibilizar o histórico de transaçõe
 
 Para utilizar os serviços sem a implementação de uma aplicação front-end, é necessário executar as rotas disponíveis via curl ou algum software de terceiros. Uma cópia da collection contendo exemplos de execução para uso no **Postman** pode ser importada através do arquivo ```postman-services-collection.js```.
 
-Com exceção dos CPFs e senha abaixo, todos os outros dados são gerados de forma aleatório e fictícia, há ainda outros CPFs que são cadastrados para fins de volume em banco de dados.
+Com exceção dos CPFs e senha abaixo, todos os outros dados são gerados de forma aleatória e fictícia, porém, existem outros CPFs que são cadastrados para fins de volume em banco de dados.
 
 ```
 41090753004
