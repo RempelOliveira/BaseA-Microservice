@@ -1,0 +1,42 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:13.4-alpine
+    container_name: base_a_postgres
+    environment:
+      - POSTGRES_USER=${DATABASE_USER}
+      - POSTGRES_PASSWORD=${DATABASE_PASSWORD}
+      - POSTGRES_DB=${DATABASE}
+    volumes:
+      - postgres:/var/lib/postgresql
+    ports:
+      - ${DATABASE_PORT}
+
+  app: &app
+    build:
+      context: .
+    depends_on:
+      - postgres
+  
+  base_a:
+    <<: *app
+    container_name: base_a
+    ports:
+      - ${FLASK_RUN_PORT}:${FLASK_RUN_PORT}
+    volumes:
+      - ./:/app
+
+  runner:
+    <<: *app
+    env_file:
+      - .env
+    command: /bin/bash
+
+volumes:
+  postgres:
+
+networks: 
+  default: 
+    external: 
+      name: bases_network
