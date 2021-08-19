@@ -1,0 +1,38 @@
+version: "3.9"
+
+services:
+  mongo:
+    image: mongo:5.0.2
+    container_name: base_b_mongodb
+    environment:
+      - MONGO_INITDB_DATABASE=${DATABASE}
+      - MONGO_INITDB_ROOT_USERNAME=${DATABASE_USER}
+      - MONGO_INITDB_ROOT_PASSWORD=${DATABASE_PASSWORD}
+    volumes:
+      - mongo:/data/db
+      - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+    ports:
+      - ${DATABASE_PORT}
+
+  app: &app
+    build:
+      context: .
+    depends_on:
+      - mongo
+
+  base_b:
+    <<: *app
+    container_name: base_b
+    ports:
+      - ${FLASK_RUN_PORT}:${FLASK_RUN_PORT}
+    volumes:
+      - ./:/app
+
+  runner:
+    <<: *app
+    env_file:
+      - .env
+    command: /bin/bash
+
+volumes:
+  mongo:
